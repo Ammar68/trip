@@ -21,4 +21,7 @@
 #     main()
 
 import os 
-print(os.system("pip3 install {}".format(args[1])))
+import sys
+
+print(str(sys.argv))
+print(os.system("pip3 install {}".format(sys.argv[1])))
