@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     # MY APPS START
     'models', 'views', 
     # MY APPS END
@@ -77,13 +78,15 @@ WSGI_APPLICATION = 'trip.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+  'default': {
+  'ENGINE': 'django.db.backends.postgresql_psycopg2',
+  'NAME': 'tripsd_main',
+  'USER': 'tripsd_admin',
+  'PASSWORD': 'MaxTrip.Sd',
+  'HOST': 'localhost',
+  'PORT': '5432',
+  }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
